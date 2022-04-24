@@ -1,8 +1,9 @@
 /*** examples/src/app.js ***/
-import React, { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
-import Pagenation from 'react-hook-pagenation' // 引入组件
-import 'react-hook-pagenation/lib/main.min.css' // 引入组件
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client'; 
+import Pagenation from '../../src/index'; // 引入组件
+// import Pagenation from 'react-hook-pagenation' // 引入组件
+// import 'react-hook-pagenation/lib/main.min.css' // 引入组件
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -21,8 +22,10 @@ const App = () => {
     };
     return (
         <div>
-            <Pagenation currentPage={currentPage} pageSize={pageSize} pageSizeOptions={pageSizeOptions} total={total} handleChangePage={handleChangePage} handleChangePageSize={handleChangePageSize}></Pagenation>
+            <Pagenation currentPage={currentPage} pageSize={pageSize} pageSizeOptions={pageSizeOptions} total={total} totalText={`共${total}条`} handleChangePage={handleChangePage} handleChangePageSize={handleChangePageSize}></Pagenation>
         </div>
     );
 }
-ReactDOM.render(<App />, document.getElementById('root'))
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
