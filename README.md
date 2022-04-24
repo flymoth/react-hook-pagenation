@@ -30,3 +30,6 @@ import 'react-hook-pagenation/lib/main.min.css';
 ## 完整Demo（Full demo）
 参考`example/src`目录。
 see `example/src`.
+![demo1](/static/demo1.png)
+![demo2](/static/demo2.png)
+![demo3](/static/demo3.png)
