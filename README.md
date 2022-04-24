@@ -30,6 +30,6 @@ import 'react-hook-pagenation/lib/main.min.css';
 ## 完整Demo（Full demo）
 参考`example/src`目录。
 see `example/src`.
-![demo1](/static/demo1.png)
-![demo2](/static/demo2.png)
-![demo3](/static/demo3.png)
+![demo1](https://github.com/flymoth/react-hook-pagenation/blob/main/static/demo1.png?raw=true)
+![demo2](https://github.com/flymoth/react-hook-pagenation/blob/main/static/demo2.png?raw=true)
+![demo3](https://github.com/flymoth/react-hook-pagenation/blob/main/static/demo3.png?raw=true)

@@ -1,6 +1,6 @@
 {
   "name": "react-hook-pagenation",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "使用react-hooks开发的分页组件",
   "main": "lib/index.js",
   "scripts": {
