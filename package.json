@@ -1,0 +1,42 @@
+{
+  "name": "react-hook-pagenation",
+  "version": "1.0.2",
+  "description": "使用react-hooks开发的分页组件",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config config/webpack.dev.config.js",
+    "build": "webpack --config config/webpack.prod.config.js",
+    "pub": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flymoth/react-hook-pagenation.git"
+  },
+  "keywords": [
+    "分页组件"
+  ],
+  "author": "flymoth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flymoth/react-hook-pagenation/issues"
+  },
+  "homepage": "https://github.com/flymoth/react-hook-pagenation#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {}
+}
