@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { default as styles } from './index.css';
-
+import { default as styles } from './index.scss';
+console.log(styles);
 function Pagenation(props) {
     const { 
         currentPage, 
@@ -45,7 +45,7 @@ function Pagenation(props) {
     const makePageSizeOptions = () => {
         if (pageSizeOptions) {
             return (
-                <select name="pageSize" className={styles['react-hook-pagenation-page-size']} id="react-hook-pagenation-page-size" value={pageSize} onChange={e => handleChangePageSize(Number(e.target.value))}>
+                <select name="pageSize" className="page-size" id="react-hook-pagenation-page-size" value={pageSize} onChange={e => handleChangePageSize(Number(e.target.value))}>
                     {pageSizeOptions.map((item, index) => (<option key={index} value={item}>{item}条/页</option>))}
                 </select>
             )
@@ -53,17 +53,17 @@ function Pagenation(props) {
     }
 
     return (
-        <div className={styles['react-hook-pagenation']}>
-            <button disabled={currentPage === 1} className={styles['prev-page']} onClick={() => handleChangePage(currentPage === 1 ? 1 : currentPage - 1)}>上一页</button>
+        <div className="react-hook-pagenation">
+            <button disabled={currentPage === 1} className="prev-page" onClick={() => handleChangePage(currentPage === 1 ? 1 : currentPage - 1)}>上一页</button>
             {pageArr.map((item, index) => {
                 if (item === '···') {
-                    return <div className={styles['page-item-omit']} key={`${item}-${index}`}>{item}</div>
+                    return <div className="page-item-omit" key={`${item}-${index}`}>{item}</div>
                 }
-                return <div className={`${styles['page-item']} ${styles[item === currentPage ? 'current-page' : '']}`} key={`${item}-${index}`} onClick={e => handleChangePage(Number(e.target.innerText))}>{item}</div>
+                return <div className={`page-item ${item === currentPage ? 'current-page' : ''}`} key={`${item}-${index}`} onClick={e => handleChangePage(Number(e.target.innerText))}>{item}</div>
             })}
-            <button disabled={currentPage === count} className={styles['next-page']} onClick={() => handleChangePage(currentPage === count ? count : currentPage + 1)}>下一页</button>
+            <button disabled={currentPage === count} className="next-page" onClick={() => handleChangePage(currentPage === count ? count : currentPage + 1)}>下一页</button>
             {makePageSizeOptions()}
-            {totalText && <div className={styles['total']}>{totalText}</div>}
+            {totalText && <div className="total">{totalText}</div>}
         </div>
     )
 }

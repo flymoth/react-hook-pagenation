@@ -1,0 +1,75 @@
+.react-hook-pagenation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    user-select: none;
+    .page-item {
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        border: 1px solid #000000;
+        margin: 0 6px;
+        cursor: pointer;
+    }
+    
+    .current-page {
+        color: red;
+        border: 1px solid red;
+    }
+    
+    .page-item-omit {
+        width: 36px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+    
+    .prev-page,
+    .next-page {
+        width: 72px;
+        height: 24px;
+        line-height: 24px;
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .prev-page {
+        margin-right: 6px;
+    }
+    
+    .next-page {
+        margin-left: 6px;
+    }
+    
+    .page-item:hover,
+    .prev-page:hover,
+    .next-page:hover {
+        border: 1px solid #4F4F4F;
+        color: #4F4F4F;
+        background-color: #EAEAEA;
+    }
+    
+    .prev-page:disabled,
+    .next-page:disabled {
+        border: 1px solid #C2C2C2;
+        color: #C2C2C2;
+        cursor: not-allowed;
+    }
+    
+    .page-size {
+        width: 72px;
+        height: 24px;
+        line-height: 24px;
+        margin: 0 12px;
+        border: 1px solid #000000;
+    }
+    
+    .total {
+        margin-left: 12px;
+    }
+}

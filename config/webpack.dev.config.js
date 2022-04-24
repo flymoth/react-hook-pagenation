@@ -12,16 +12,34 @@ const devConfig = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.s[ac]ss$/,
                 exclude: /\.min\.css$/,
                 use: [
                     { loader: 'style-loader' },
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: true
+                            modules: {
+                                mode: "global"
+                            }
                         }
-                    }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'postcss-preset-env',
+                                        {
+                                            // 其他选项
+                                        },
+                                    ],
+                                ],
+                            },
+                        },
+                    },
+                    { loader: 'sass-loader' }
                 ]
             },
             {
