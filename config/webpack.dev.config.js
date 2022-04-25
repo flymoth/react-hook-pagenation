@@ -7,7 +7,7 @@ const devConfig = {
     entry: path.join(__dirname, "../demo/src/index.js"), // 入口，处理资源文件的依赖关系
     output: {
         path: path.join(__dirname, "../demo/src/"),
-        filename: "react-hook-pagenation-dev.js",
+        filename: "dev.js",
     },
     module: {
         rules: [
