@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { default as styles } from './index.scss';
-console.log(styles);
+import './index.scss';
 function Pagenation(props) {
     const { 
         currentPage, 
