@@ -1,11 +1,11 @@
 {
   "name": "react-hook-pagenation",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "使用react-hooks开发的分页组件",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config config/webpack.dev.config.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.prod.config.js",
     "pub": "npm run build && npm publish"
   },
@@ -14,7 +14,9 @@
     "url": "git+https://github.com/flymoth/react-hook-pagenation.git"
   },
   "keywords": [
-    "分页组件"
+    "分页组件",
+    "react",
+    "react-hooks"
   ],
   "author": "flymoth",
   "license": "MIT",

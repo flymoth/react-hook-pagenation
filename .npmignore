@@ -1,7 +1,7 @@
 # 指定发布 npm 的时候需要忽略的文件和文件夹
 # npm 默认不会把 node_modules 发上去
-example # webpack配置
+demo # demo
 config # webpack配置
 src # 组件源代码目录
+static # 示例
 .babelrc # babel 配置
-.static # 示例
