@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
 import './index.scss';
-function Pagenation(props) {
-    const { 
-        currentPage, 
-        pageSize, 
-        pageSizeOptions, 
-        total, 
-        totalText, 
-        handleChangePage, 
+
+interface PegationProps {
+    currentPage: number;
+    pageSize: number;
+    pageSizeOptions?: Array<number>;
+    total: number;
+    totalText?: string;
+    handleChangePage: (v: number) => void;
+    handleChangePageSize: (v: number) => void;
+}
+
+function Pagenation(props: PegationProps) {
+    const {
+        currentPage,
+        pageSize,
+        pageSizeOptions,
+        total,
+        totalText,
+        handleChangePage,
         handleChangePageSize
     } = props;
     const count = Math.ceil(total / pageSize);
-    const [pageArr, setPageArr] = useState([]);
+    const [pageArr, setPageArr] = useState<(number | string)[]>([]);
     useEffect(() => {
         pageChange();
     }, [currentPage, pageSize, pageSizeOptions, total])
@@ -49,6 +60,7 @@ function Pagenation(props) {
                 </select>
             )
         }
+        return '';
     }
 
     return (
@@ -58,7 +70,7 @@ function Pagenation(props) {
                 if (item === '···') {
                     return <div className="page-item-omit" key={`${item}-${index}`}>{item}</div>
                 }
-                return <div className={`page-item ${item === currentPage ? 'current-page' : ''}`} key={`${item}-${index}`} onClick={e => handleChangePage(Number(e.target.innerText))}>{item}</div>
+                return <div className={`page-item ${item === currentPage ? 'current-page' : ''}`} key={`${item}-${index}`} onClick={() => handleChangePage(+item)}>{item}</div>
             })}
             <button disabled={currentPage === count} className="next-page" onClick={() => handleChangePage(currentPage === count ? count : currentPage + 1)}>下一页</button>
             {makePageSizeOptions()}
