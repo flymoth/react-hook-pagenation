@@ -1,4 +1,3 @@
-const path = require('path');
 module.exports = {
     resolve: {
         // 定义 import 引用时可省略的文件后缀名
