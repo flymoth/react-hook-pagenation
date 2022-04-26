@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './index.scss';
 
-interface PegationProps {
+interface PagenationProps {
     currentPage: number;
     pageSize: number;
     pageSizeOptions?: Array<number>;
@@ -11,7 +11,7 @@ interface PegationProps {
     handleChangePageSize: (v: number) => void;
 }
 
-function Pagenation(props: PegationProps) {
+function Pagenation(props: PagenationProps) {
     const {
         currentPage,
         pageSize,
